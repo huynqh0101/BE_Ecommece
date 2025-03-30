@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ProductModule } from 'src/product/product.module';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
@@ -17,7 +18,8 @@ import { ProductModule } from 'src/product/product.module';
         console.log('MongoDB URI:', uri); // In ra để kiểm tra
         return { uri };
       }
-    })
+    }),
+    UserModule
   ],
   controllers: [AppController],
   providers: [AppService]

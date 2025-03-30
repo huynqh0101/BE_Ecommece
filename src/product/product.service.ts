@@ -1,4 +1,4 @@
-import { Product } from './entities/product.entity';
+import { Product } from './Schema/product.schema';
 import { InjectModel } from '@nestjs/mongoose';
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { Model } from 'mongoose';
