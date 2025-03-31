@@ -10,7 +10,7 @@ import {
 import { ProductService } from './product.service';
 import { Product } from './Schema/product.schema';
 
-@Controller('product')
+@Controller('products')
 export class ProductController {
   constructor(private productService: ProductService) {}
 
@@ -21,7 +21,7 @@ export class ProductController {
   }
 
   // Get all products
-  @Get('find-all')
+  @Get()
   findAll(): Promise<Product[]> {
     return this.productService.findAll();
   }
